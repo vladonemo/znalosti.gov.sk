@@ -262,6 +262,11 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<nodeVersion>v18.18.2</nodeVersion>
+					<nodeAutoUpdate>true</nodeAutoUpdate>
+					<requireHomeNodeExec>true</requireHomeNodeExec>
+				</configuration>
 			</plugin>
 
 			<!-- To allow generate OpenAPI docs from Javadocs comments -->
@@ -321,6 +326,9 @@
 						</executions>
 						<configuration>
 							<productionMode>true</productionMode>
+							<nodeVersion>v18.18.2</nodeVersion>
+							<nodeAutoUpdate>true</nodeAutoUpdate>
+							<requireHomeNodeExec>true</requireHomeNodeExec>
 						</configuration>
 					</plugin>
 					<!-- To allow generate OpenAPI docs from Javadocs comments -->
