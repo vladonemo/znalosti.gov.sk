@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+  <xmi:Documentation exporter="znalosti.gov.sk model generator" exporterVersion="1.0"/>
+  <uml:Model xmi:type="uml:Model" name="EA_Model" xmi:id="EAID_MODEL">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000001" name="znalosti.gov.sk">
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000002" name="01 Architecture Overview">
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000067" name="Web UI (Vaadin Flow + IDSK)">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000068" name="REST API">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000069" name="Service Layer">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000070" name="RDF Repository Access (RepositoryPool)">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000071" name="Security (Spring Security)">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000072" name="RDF4J Triple Store">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000073" name="GitHub Source Data">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="EAID_E00000074" name="MetaIS">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000001" client="EAID_E00000067" supplier="EAID_E00000068"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000002" client="EAID_E00000067" supplier="EAID_E00000069"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000003" client="EAID_E00000068" supplier="EAID_E00000069"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000004" client="EAID_E00000069" supplier="EAID_E00000070"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000005" client="EAID_E00000068" supplier="EAID_E00000071"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000006" name="SPARQL / RDF4J REST" client="EAID_E00000070" supplier="EAID_E00000072"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000007" name="HTTPS (zipball/branches)" client="EAID_E00000070" supplier="EAID_E00000073"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="EAID_C00000008" name="refid integration API" client="EAID_E00000074" supplier="EAID_E00000068"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000003" name="02 Presentation Layer (Vaadin UI)">
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000001" name="MainView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000002" name="SearchView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000003" name="ResourceView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000004" name="MetadataView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000005" name="CategoriesView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000006" name="DataView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000007" name="SparqlView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000008" name="ApiView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000009" name="AboutView">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000010" name="IDSKHeaderWeb">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000011" name="IDSKHeaderWebMain">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000012" name="IDSKHeaderWebNav">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000013" name="IDSKSearchResultsContent">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000014" name="IDSKSearchResultsFilter">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000009">
+          <memberEnd xmi:idref="EAID_C00000009_end1"/>
+          <memberEnd xmi:idref="EAID_C00000009_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000009_end1" type="EAID_E00000001"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000009_end2" type="EAID_E00000010"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000010">
+          <memberEnd xmi:idref="EAID_C00000010_end1"/>
+          <memberEnd xmi:idref="EAID_C00000010_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000010_end1" type="EAID_E00000010"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000010_end2" type="EAID_E00000011"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000011">
+          <memberEnd xmi:idref="EAID_C00000011_end1"/>
+          <memberEnd xmi:idref="EAID_C00000011_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000011_end1" type="EAID_E00000010"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000011_end2" type="EAID_E00000012"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000012" client="EAID_E00000002" supplier="EAID_E00000017"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000013" client="EAID_E00000003" supplier="EAID_E00000018"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000014" client="EAID_E00000006" supplier="EAID_E00000022"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000015" client="EAID_E00000007" supplier="EAID_E00000020"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000016" client="EAID_E00000004" supplier="EAID_E00000021"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000004" name="03 REST API Layer">
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000015" name="ResourceController">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O0" name="resource" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O1" name="search" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O2" name="listDbs" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O3" name="reloadDbs" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O4" name="exportDb" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O5" name="reloadDbByBranchId" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000015_O6" name="sparqlPostURLencoded" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000016" name="ReferenceIdentifierManagementController">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O0" name="getApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O1" name="createApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O2" name="updateDraftApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O3" name="deleteApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O4" name="applyApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O5" name="rejectApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O6" name="approveApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O7" name="resetDb" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000016_O8" name="search" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000017" client="EAID_E00000015" supplier="EAID_E00000017"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000018" client="EAID_E00000015" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000019" client="EAID_E00000016" supplier="EAID_E00000023"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000056" name="secured by" client="EAID_E00000016" supplier="EAID_E00000056"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000005" name="04 Service Layer">
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000017" name="SearchService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000017_O0" name="search" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000018" name="ResourceService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000018_O0" name="describeUriBySelect" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000018_O1" name="getBaseProperties" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000019" name="ResourceService2">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000020" name="SparqlQueryService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000020_O0" name="getTupleQueryResultHtml" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000020_O1" name="getGraphQueryResultHtml" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000020_O2" name="getBooleanQueryResultHtml" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000021" name="StatisticsService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000021_O0" name="getAllTriplesCount" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000021_O1" name="getAllNamedGraphsCount" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000021_O2" name="getDatasetsCount" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000021_O3" name="getCatalogsCount" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000022" name="DatasetService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000022_O0" name="listData" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000023" name="ReferenceIdentifierApplicationManagementService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O0" name="createApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O1" name="updateDraftApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O2" name="deleteApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O3" name="applyApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O4" name="rejectApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O5" name="approveApplication" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O6" name="search" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O7" name="resetDb" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000023_O8" name="validate" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000024" name="LoadReferenceIdentifierApplicationManagementService">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000024_O0" name="loadApplicationFromDB" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000025" name="ApplicationURIMapperUtils">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000020" client="EAID_E00000017" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000021" client="EAID_E00000018" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000022" client="EAID_E00000020" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000023" client="EAID_E00000021" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000024" client="EAID_E00000022" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000025" client="EAID_E00000023" supplier="EAID_E00000024"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000026" client="EAID_E00000023" supplier="EAID_E00000025"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000027" client="EAID_E00000017" supplier="EAID_E00000028"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000028" client="EAID_E00000018" supplier="EAID_E00000029"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000029" client="EAID_E00000022" supplier="EAID_E00000030"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000054" name="refidRepository" client="EAID_E00000023" supplier="EAID_E00000055"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000006" name="05 Domain Model">
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000026" name="RepositoryPool">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000026_A0" name="defaultRepositoryId" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000026_A1" name="dbUrl" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000026_A2" name="githubRepositoryUrl" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000026_A3" name="repositories" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000026_O0" name="getDefaultRepository" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000026_O1" name="getRepositoryOrDefault" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000026_O2" name="reloadDbFromBranch" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000026_O3" name="exportDb" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000026_O4" name="createRepository" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000027" name="AbstractEntity" isAbstract="true">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000028" name="Result">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000028_A0" name="subject" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000028_A1" name="predicate/property" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000028_A2" name="object" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000028_A3" name="graph" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000028_A4" name="graphName" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000028_A5" name="searchString" visibility="private"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000029" name="Resource">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A0" name="uri" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A1" name="prefLabel" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A2" name="type" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A3" name="subject" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A4" name="predicate" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A5" name="object" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A6" name="isInverse" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A7" name="graph" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000029_A8" name="language" visibility="private"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000030" general="EAID_E00000027"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000030" name="Dataset">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A0" name="dataset" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A1" name="datasetTitle" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A2" name="publisher" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A3" name="publisherName" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A4" name="catalog" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A5" name="theme" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000030_A6" name="version" visibility="private"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000031" general="EAID_E00000027"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000031" name="SemanticResourceRegistrationApplication" isAbstract="true">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A0" name="uri" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A1" name="description" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A2" name="createdAt" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A3" name="lastModifiedAt" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A4" name="appliedAt" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A5" name="rejectedAt" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A6" name="approvedAt" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A7" name="state" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A8" name="applicant" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A9" name="createdBy" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000031_A10" name="approvedBy" visibility="private"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000032" name="OntologyRegistrationApplication">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000032_A0" name="subject" visibility="private"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000032" general="EAID_E00000031"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000033" name="OntologyVersionRegistrationApplication">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000033" general="EAID_E00000031"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000034" name="OntologyComponentRegistrationApplication&lt;T&gt;" isAbstract="true">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000034_A0" name="subject" visibility="private"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000034" general="EAID_E00000031"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000035" name="ClassComponentRegistrationApplication">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000035" general="EAID_E00000034"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000036" name="DatatypePropertyComponentRegistrationApplication">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000036" general="EAID_E00000034"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000037" name="ObjectPropertyComponentRegistrationApplication">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000037" general="EAID_E00000034"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000038" name="URITemplateRegistrationApplication">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000038" general="EAID_E00000031"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000039" name="User">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000039_A0" name="username" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000039_A1" name="institutionId" visibility="private"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000040" name="Organization">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000040_A0" name="organizationId" visibility="private"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E00000040_A1" name="uri" visibility="private"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_E00000041" name="ApplicationState">
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_E00000041_LDRAFT" name="DRAFT"/>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_E00000041_LAPPLIED" name="APPLIED"/>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_E00000041_LAPPROVED" name="APPROVED"/>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_E00000041_LREJECTED" name="REJECTED"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_E00000042" name="ValueType">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000043" name="Ontology">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000044" name="OntologyConcept">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000045" name="URITemplate">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000046" name="URITemplateQueryParam">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000047" name="OntologyComponent" isAbstract="true">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000048" name="ClassComponent">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000039" general="EAID_E00000047"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000049" name="DatatypePropertyComponent">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000040" general="EAID_E00000047"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000050" name="ObjectPropertyComponent">
+          <generalization xmi:type="uml:Generalization" xmi:id="EAID_G00000041" general="EAID_E00000047"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000051" name="KnowledgeGraphException">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_E00000052" name="ErrorCode">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000053" name="GithubBranch">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000042" name="createdBy/approvedBy">
+          <memberEnd xmi:idref="EAID_C00000042_end1"/>
+          <memberEnd xmi:idref="EAID_C00000042_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000042_end1" type="EAID_E00000031"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000042_end2" type="EAID_E00000039"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000043" name="applicant">
+          <memberEnd xmi:idref="EAID_C00000043_end1"/>
+          <memberEnd xmi:idref="EAID_C00000043_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000043_end1" type="EAID_E00000031"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000043_end2" type="EAID_E00000040"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000044" name="state">
+          <memberEnd xmi:idref="EAID_C00000044_end1"/>
+          <memberEnd xmi:idref="EAID_C00000044_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000044_end1" type="EAID_E00000031"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000044_end2" type="EAID_E00000041"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000045" name="subject">
+          <memberEnd xmi:idref="EAID_C00000045_end1"/>
+          <memberEnd xmi:idref="EAID_C00000045_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000045_end1" type="EAID_E00000032"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000045_end2" type="EAID_E00000044"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000046" name="subject">
+          <memberEnd xmi:idref="EAID_C00000046_end1"/>
+          <memberEnd xmi:idref="EAID_C00000046_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000046_end1" type="EAID_E00000034"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000046_end2" type="EAID_E00000047"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000047" name="subject">
+          <memberEnd xmi:idref="EAID_C00000047_end1"/>
+          <memberEnd xmi:idref="EAID_C00000047_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000047_end1" type="EAID_E00000035"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000047_end2" type="EAID_E00000048"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000048" name="subject">
+          <memberEnd xmi:idref="EAID_C00000048_end1"/>
+          <memberEnd xmi:idref="EAID_C00000048_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000048_end1" type="EAID_E00000036"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000048_end2" type="EAID_E00000049"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000049" name="subject">
+          <memberEnd xmi:idref="EAID_C00000049_end1"/>
+          <memberEnd xmi:idref="EAID_C00000049_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000049_end1" type="EAID_E00000037"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000049_end2" type="EAID_E00000050"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000050" name="subject">
+          <memberEnd xmi:idref="EAID_C00000050_end1"/>
+          <memberEnd xmi:idref="EAID_C00000050_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000050_end1" type="EAID_E00000038"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000050_end2" type="EAID_E00000045"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000051">
+          <memberEnd xmi:idref="EAID_C00000051_end1"/>
+          <memberEnd xmi:idref="EAID_C00000051_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000051_end1" type="EAID_E00000045"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000051_end2" type="EAID_E00000046"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000052" name="ontology">
+          <memberEnd xmi:idref="EAID_C00000052_end1"/>
+          <memberEnd xmi:idref="EAID_C00000052_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000052_end1" type="EAID_E00000044"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000052_end2" type="EAID_E00000043"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000007" name="06 Configuration &amp; Infrastructure">
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000054" name="Application">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000055" name="DatabaseConfiguration">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000055_O0" name="getZnalostiRepository" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_E00000055_O1" name="getRefIdRepository" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000056" name="SecurityConfig">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000057" name="RestConfigurator">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="EAID_E00000058" name="RestExceptionHandler">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000053" name="@Bean znalostiRepository" client="EAID_E00000055" supplier="EAID_E00000026"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000055" client="EAID_E00000054" supplier="EAID_E00000055"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_00000008" name="07 Deployment &amp; External Systems">
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000059" name="znalosti-proxy">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000060" name="znalosti">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000061" name="znalosti-test">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000062" name="rdf-server">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="EAID_E00000063" name="znalosti.jar">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000064" name="Web Browser">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000065" name="GitHub: centralny-model-udajov">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Node" xmi:id="EAID_E00000066" name="MetaIS (Integration Partner)">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000057" client="EAID_E00000063" supplier="EAID_E00000060"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="EAID_C00000058" client="EAID_E00000063" supplier="EAID_E00000061"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="EAID_C00000059" client="EAID_E00000063" supplier="EAID_E00000067"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000060" name="HTTPS">
+          <memberEnd xmi:idref="EAID_C00000060_end1"/>
+          <memberEnd xmi:idref="EAID_C00000060_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000060_end1" type="EAID_E00000064"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000060_end2" type="EAID_E00000059"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000061" name="HTTP :9090">
+          <memberEnd xmi:idref="EAID_C00000061_end1"/>
+          <memberEnd xmi:idref="EAID_C00000061_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000061_end1" type="EAID_E00000059"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000061_end2" type="EAID_E00000060"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000062" name="HTTP :9091">
+          <memberEnd xmi:idref="EAID_C00000062_end1"/>
+          <memberEnd xmi:idref="EAID_C00000062_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000062_end1" type="EAID_E00000059"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000062_end2" type="EAID_E00000061"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000063" name="RDF4J REST :8080">
+          <memberEnd xmi:idref="EAID_C00000063_end1"/>
+          <memberEnd xmi:idref="EAID_C00000063_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000063_end1" type="EAID_E00000060"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000063_end2" type="EAID_E00000062"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000064" name="RDF4J REST :8080">
+          <memberEnd xmi:idref="EAID_C00000064_end1"/>
+          <memberEnd xmi:idref="EAID_C00000064_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000064_end1" type="EAID_E00000061"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000064_end2" type="EAID_E00000062"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000065" name="HTTPS source data">
+          <memberEnd xmi:idref="EAID_C00000065_end1"/>
+          <memberEnd xmi:idref="EAID_C00000065_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000065_end1" type="EAID_E00000060"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000065_end2" type="EAID_E00000065"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="EAID_C00000066" name="refid integration API">
+          <memberEnd xmi:idref="EAID_C00000066_end1"/>
+          <memberEnd xmi:idref="EAID_C00000066_end2"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000066_end1" type="EAID_E00000066"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="EAID_C00000066_end2" type="EAID_E00000059"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <diagrams>
+      <diagram xmi:id="EAID_DGM00000001">
+        <model package="EAPK_00000002" localID="1"/>
+        <properties name="01 Architecture Overview" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000067" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000068" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000069" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000070" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000071" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000072" seqno="6"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000073" seqno="7"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000074" seqno="8"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000002">
+        <model package="EAPK_00000003" localID="2"/>
+        <properties name="02 Presentation Layer" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000001" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000002" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000003" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000004" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000005" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000006" seqno="6"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000007" seqno="7"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000008" seqno="8"/>
+          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000009" seqno="9"/>
+          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000010" seqno="10"/>
+          <element geometry="Left=470;Top=330;Right=640;Bottom=420;" subject="EAID_E00000011" seqno="11"/>
+          <element geometry="Left=690;Top=330;Right=860;Bottom=420;" subject="EAID_E00000012" seqno="12"/>
+          <element geometry="Left=30;Top=480;Right=200;Bottom=570;" subject="EAID_E00000013" seqno="13"/>
+          <element geometry="Left=250;Top=480;Right=420;Bottom=570;" subject="EAID_E00000014" seqno="14"/>
+          <element geometry="Left=470;Top=480;Right=640;Bottom=570;" subject="EAID_E00000017" seqno="15"/>
+          <element geometry="Left=690;Top=480;Right=860;Bottom=570;" subject="EAID_E00000018" seqno="16"/>
+          <element geometry="Left=30;Top=630;Right=200;Bottom=720;" subject="EAID_E00000022" seqno="17"/>
+          <element geometry="Left=250;Top=630;Right=420;Bottom=720;" subject="EAID_E00000020" seqno="18"/>
+          <element geometry="Left=470;Top=630;Right=640;Bottom=720;" subject="EAID_E00000021" seqno="19"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000003">
+        <model package="EAPK_00000004" localID="3"/>
+        <properties name="03 REST API Layer" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000015" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000016" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000017" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000026" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000023" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000056" seqno="6"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000004">
+        <model package="EAPK_00000005" localID="4"/>
+        <properties name="04 Service Layer" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000017" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000018" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000019" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000020" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000021" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000022" seqno="6"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000023" seqno="7"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000024" seqno="8"/>
+          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000025" seqno="9"/>
+          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000026" seqno="10"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000005">
+        <model package="EAPK_00000006" localID="5"/>
+        <properties name="05a Domain Model - refid Applications" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000031" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000032" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000033" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000034" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000035" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000036" seqno="6"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000037" seqno="7"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000038" seqno="8"/>
+          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000039" seqno="9"/>
+          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000040" seqno="10"/>
+          <element geometry="Left=470;Top=330;Right=640;Bottom=420;" subject="EAID_E00000041" seqno="11"/>
+          <element geometry="Left=690;Top=330;Right=860;Bottom=420;" subject="EAID_E00000044" seqno="12"/>
+          <element geometry="Left=30;Top=480;Right=200;Bottom=570;" subject="EAID_E00000047" seqno="13"/>
+          <element geometry="Left=250;Top=480;Right=420;Bottom=570;" subject="EAID_E00000048" seqno="14"/>
+          <element geometry="Left=470;Top=480;Right=640;Bottom=570;" subject="EAID_E00000049" seqno="15"/>
+          <element geometry="Left=690;Top=480;Right=860;Bottom=570;" subject="EAID_E00000050" seqno="16"/>
+          <element geometry="Left=30;Top=630;Right=200;Bottom=720;" subject="EAID_E00000045" seqno="17"/>
+          <element geometry="Left=250;Top=630;Right=420;Bottom=720;" subject="EAID_E00000046" seqno="18"/>
+          <element geometry="Left=470;Top=630;Right=640;Bottom=720;" subject="EAID_E00000043" seqno="19"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000006">
+        <model package="EAPK_00000006" localID="6"/>
+        <properties name="05b Domain Model - Core Entities" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000027" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000029" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000030" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000028" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000026" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000051" seqno="6"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000052" seqno="7"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000053" seqno="8"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000007">
+        <model package="EAPK_00000007" localID="7"/>
+        <properties name="06 Configuration &amp; Infrastructure" type="Logical"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000054" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000055" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000056" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000057" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000058" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000026" seqno="6"/>
+        </elements>
+      </diagram>
+      <diagram xmi:id="EAID_DGM00000008">
+        <model package="EAPK_00000008" localID="8"/>
+        <properties name="07 Deployment" type="Deployment"/>
+        <elements>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000064" seqno="1"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000059" seqno="2"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000060" seqno="3"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000061" seqno="4"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000062" seqno="5"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000063" seqno="6"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000065" seqno="7"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000066" seqno="8"/>
+        </elements>
+      </diagram>
+    </diagrams>
+  </xmi:Extension>
+</xmi:XMI>
