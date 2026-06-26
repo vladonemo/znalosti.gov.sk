@@ -430,137 +430,1666 @@
     </packagedElement>
   </uml:Model>
   <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements>
+      <element xmi:idref="EAPK_00000002" xmi:type="uml:Package" name="01 Architecture Overview" scope="public">
+        <model package="EAPK_00000001" ea_localid="100002" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Logicky pohlad na vrstvy aplikacie a externe systemy."/>
+      </element>
+      <element xmi:idref="EAPK_00000003" xmi:type="uml:Package" name="02 Presentation Layer (Vaadin UI)" scope="public">
+        <model package="EAPK_00000001" ea_localid="100003" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Server-side UI postavene na Vaadin Flow a dizajn-systeme IDSK (idsk4j)."/>
+      </element>
+      <element xmi:idref="EAPK_00000004" xmi:type="uml:Package" name="03 REST API Layer" scope="public">
+        <model package="EAPK_00000001" ea_localid="100004" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spring MVC REST kontrolery - verejne API a integracne rozhranie."/>
+      </element>
+      <element xmi:idref="EAPK_00000005" xmi:type="uml:Package" name="04 Service Layer" scope="public">
+        <model package="EAPK_00000001" ea_localid="100005" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Aplikacne sluzby - vyhladavanie, SPARQL, statistiky, sprava ziadosti refid."/>
+      </element>
+      <element xmi:idref="EAPK_00000006" xmi:type="uml:Package" name="05 Domain Model" scope="public">
+        <model package="EAPK_00000001" ea_localid="100006" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Domenove entity, model ziadosti o registraciu (refid) a pristup k RDF uloziskam."/>
+      </element>
+      <element xmi:idref="EAPK_00000007" xmi:type="uml:Package" name="06 Configuration &amp; Infrastructure" scope="public">
+        <model package="EAPK_00000001" ea_localid="100007" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spring konfiguracia, bezpecnost a bootstrap aplikacie."/>
+      </element>
+      <element xmi:idref="EAPK_00000008" xmi:type="uml:Package" name="07 Deployment &amp; External Systems" scope="public">
+        <model package="EAPK_00000001" ea_localid="100008" ea_eleType="package"/>
+        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Nasadenie (Docker Compose) a externe systemy."/>
+      </element>
+      <element xmi:idref="EAID_E00000001" xmi:type="uml:Class" name="MainView" scope="public">
+        <model package="EAPK_00000003" ea_localid="1" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="AppLayout - hlavna sablona, navigacny IDSK header s polozkami Vyhladavanie, Ontologie, Kategorie, Priklady dat, SPARQL, API, O portali."/>
+      </element>
+      <element xmi:idref="EAID_E00000002" xmi:type="uml:Class" name="SearchView" scope="public">
+        <model package="EAPK_00000003" ea_localid="2" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Fulltextove vyhladavanie nad znalostnym grafom (3 urovne)."/>
+      </element>
+      <element xmi:idref="EAID_E00000003" xmi:type="uml:Class" name="ResourceView" scope="public">
+        <model package="EAPK_00000003" ea_localid="3" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Detail RDF zdroja (subject/predicate/object), priame a inverzne vazby."/>
+      </element>
+      <element xmi:idref="EAID_E00000004" xmi:type="uml:Class" name="MetadataView" scope="public">
+        <model package="EAPK_00000003" ea_localid="4" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Prehlad ontologii."/>
+      </element>
+      <element xmi:idref="EAID_E00000005" xmi:type="uml:Class" name="CategoriesView" scope="public">
+        <model package="EAPK_00000003" ea_localid="5" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Kategorie / temy."/>
+      </element>
+      <element xmi:idref="EAID_E00000006" xmi:type="uml:Class" name="DataView" scope="public">
+        <model package="EAPK_00000003" ea_localid="6" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Priklady datovych sad."/>
+      </element>
+      <element xmi:idref="EAID_E00000007" xmi:type="uml:Class" name="SparqlView" scope="public">
+        <model package="EAPK_00000003" ea_localid="7" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Interaktivny SPARQL endpoint UI."/>
+      </element>
+      <element xmi:idref="EAID_E00000008" xmi:type="uml:Class" name="ApiView" scope="public">
+        <model package="EAPK_00000003" ea_localid="8" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Dokumentacia REST API."/>
+      </element>
+      <element xmi:idref="EAID_E00000009" xmi:type="uml:Class" name="AboutView" scope="public">
+        <model package="EAPK_00000003" ea_localid="9" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Vaadin View"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="O portali."/>
+      </element>
+      <element xmi:idref="EAID_E00000010" xmi:type="uml:Class" name="IDSKHeaderWeb" scope="public">
+        <model package="EAPK_00000003" ea_localid="10" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="UI Component"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="IDSK dizajn-system header."/>
+      </element>
+      <element xmi:idref="EAID_E00000011" xmi:type="uml:Class" name="IDSKHeaderWebMain" scope="public">
+        <model package="EAPK_00000003" ea_localid="11" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="UI Component"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000012" xmi:type="uml:Class" name="IDSKHeaderWebNav" scope="public">
+        <model package="EAPK_00000003" ea_localid="12" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="UI Component"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000013" xmi:type="uml:Class" name="IDSKSearchResultsContent" scope="public">
+        <model package="EAPK_00000003" ea_localid="13" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="UI Component"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000014" xmi:type="uml:Class" name="IDSKSearchResultsFilter" scope="public">
+        <model package="EAPK_00000003" ea_localid="14" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="UI Component"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000015" xmi:type="uml:Class" name="ResourceController" scope="public">
+        <model package="EAPK_00000004" ea_localid="15" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="RestController"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="@RequestMapping('/api') - verejne REST API znalostneho grafu."/>
+      </element>
+      <element xmi:idref="EAID_E00000016" xmi:type="uml:Class" name="ReferenceIdentifierManagementController" scope="public">
+        <model package="EAPK_00000004" ea_localid="16" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="RestController"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="@RequestMapping('/integration/api/refid/application') - integracne rozhranie na spravu referencovatelnych identifikatorov (chranene HTTP Basic, rola INT_PARTNER)."/>
+      </element>
+      <element xmi:idref="EAID_E00000017" xmi:type="uml:Class" name="SearchService" scope="public">
+        <model package="EAPK_00000005" ea_localid="17" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Fulltextove SPARQL vyhladavanie nad RDF grafmi."/>
+      </element>
+      <element xmi:idref="EAID_E00000018" xmi:type="uml:Class" name="ResourceService" scope="public">
+        <model package="EAPK_00000005" ea_localid="18" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000019" xmi:type="uml:Class" name="ResourceService2" scope="public">
+        <model package="EAPK_00000005" ea_localid="19" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000020" xmi:type="uml:Class" name="SparqlQueryService" scope="public">
+        <model package="EAPK_00000005" ea_localid="20" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000021" xmi:type="uml:Class" name="StatisticsService" scope="public">
+        <model package="EAPK_00000005" ea_localid="21" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000022" xmi:type="uml:Class" name="DatasetService" scope="public">
+        <model package="EAPK_00000005" ea_localid="22" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000023" xmi:type="uml:Class" name="ReferenceIdentifierApplicationManagementService" scope="public">
+        <model package="EAPK_00000005" ea_localid="23" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Sprava zivotneho cyklu ziadosti refid (DRAFT-&gt;APPLIED-&gt;APPROVED/REJECTED)."/>
+      </element>
+      <element xmi:idref="EAID_E00000024" xmi:type="uml:Class" name="LoadReferenceIdentifierApplicationManagementService" scope="public">
+        <model package="EAPK_00000005" ea_localid="24" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Service"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000025" xmi:type="uml:Class" name="ApplicationURIMapperUtils" scope="public">
+        <model package="EAPK_00000005" ea_localid="25" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="utility"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Mapovanie domenoveho objektu ziadosti na/z RDF statements."/>
+      </element>
+      <element xmi:idref="EAID_E00000026" xmi:type="uml:Class" name="RepositoryPool" scope="public">
+        <model package="EAPK_00000006" ea_localid="26" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="repository"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Pool pripojeni k RDF4J uloziskam. Nacitava data z GitHub vetiev (centralny-model-udajov) a spravuje pomenovane RDF repozitare."/>
+      </element>
+      <element xmi:idref="EAID_E00000027" xmi:type="uml:Class" name="AbstractEntity" scope="public">
+        <model package="EAPK_00000006" ea_localid="27" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public" isAbstract="true"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spolocny predok domenovych entit."/>
+      </element>
+      <element xmi:idref="EAID_E00000028" xmi:type="uml:Class" name="Result" scope="public">
+        <model package="EAPK_00000006" ea_localid="28" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Vysledok vyhladavania."/>
+      </element>
+      <element xmi:idref="EAID_E00000029" xmi:type="uml:Class" name="Resource" scope="public">
+        <model package="EAPK_00000006" ea_localid="29" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="RDF zdroj a jeho vlastnosti (so skracovanim URI na prefixy)."/>
+      </element>
+      <element xmi:idref="EAID_E00000030" xmi:type="uml:Class" name="Dataset" scope="public">
+        <model package="EAPK_00000006" ea_localid="30" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="DCAT datova sada."/>
+      </element>
+      <element xmi:idref="EAID_E00000031" xmi:type="uml:Class" name="SemanticResourceRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="31" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public" isAbstract="true"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="abstract"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Abstraktna ziadost o registraciu semantickeho datoveho prvku."/>
+      </element>
+      <element xmi:idref="EAID_E00000032" xmi:type="uml:Class" name="OntologyRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="32" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Ziadost o registraciu ontologie."/>
+      </element>
+      <element xmi:idref="EAID_E00000033" xmi:type="uml:Class" name="OntologyVersionRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="33" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Ziadost o registraciu verzie ontologie."/>
+      </element>
+      <element xmi:idref="EAID_E00000034" xmi:type="uml:Class" name="OntologyComponentRegistrationApplication&lt;T&gt;" scope="public">
+        <model package="EAPK_00000006" ea_localid="34" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public" isAbstract="true"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Ziadost o registraciu ontologickeho prvku."/>
+      </element>
+      <element xmi:idref="EAID_E00000035" xmi:type="uml:Class" name="ClassComponentRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="35" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000036" xmi:type="uml:Class" name="DatatypePropertyComponentRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="36" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000037" xmi:type="uml:Class" name="ObjectPropertyComponentRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="37" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000038" xmi:type="uml:Class" name="URITemplateRegistrationApplication" scope="public">
+        <model package="EAPK_00000006" ea_localid="38" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000039" xmi:type="uml:Class" name="User" scope="public">
+        <model package="EAPK_00000006" ea_localid="39" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000040" xmi:type="uml:Class" name="Organization" scope="public">
+        <model package="EAPK_00000006" ea_localid="40" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000041" xmi:type="uml:Enumeration" name="ApplicationState" scope="public">
+        <model package="EAPK_00000006" ea_localid="41" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Enumeration" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="enumeration"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000042" xmi:type="uml:Enumeration" name="ValueType" scope="public">
+        <model package="EAPK_00000006" ea_localid="42" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Enumeration" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="enumeration"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000043" xmi:type="uml:Class" name="Ontology" scope="public">
+        <model package="EAPK_00000006" ea_localid="43" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000044" xmi:type="uml:Class" name="OntologyConcept" scope="public">
+        <model package="EAPK_00000006" ea_localid="44" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000045" xmi:type="uml:Class" name="URITemplate" scope="public">
+        <model package="EAPK_00000006" ea_localid="45" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000046" xmi:type="uml:Class" name="URITemplateQueryParam" scope="public">
+        <model package="EAPK_00000006" ea_localid="46" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000047" xmi:type="uml:Class" name="OntologyComponent" scope="public">
+        <model package="EAPK_00000006" ea_localid="47" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public" isAbstract="true"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000048" xmi:type="uml:Class" name="ClassComponent" scope="public">
+        <model package="EAPK_00000006" ea_localid="48" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000049" xmi:type="uml:Class" name="DatatypePropertyComponent" scope="public">
+        <model package="EAPK_00000006" ea_localid="49" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000050" xmi:type="uml:Class" name="ObjectPropertyComponent" scope="public">
+        <model package="EAPK_00000006" ea_localid="50" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000051" xmi:type="uml:Class" name="KnowledgeGraphException" scope="public">
+        <model package="EAPK_00000006" ea_localid="51" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="exception"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000052" xmi:type="uml:Enumeration" name="ErrorCode" scope="public">
+        <model package="EAPK_00000006" ea_localid="52" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Enumeration" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="enumeration"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000053" xmi:type="uml:Class" name="GithubBranch" scope="public">
+        <model package="EAPK_00000006" ea_localid="53" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="DTO pre GitHub API vetvy."/>
+      </element>
+      <element xmi:idref="EAID_E00000054" xmi:type="uml:Class" name="Application" scope="public">
+        <model package="EAPK_00000007" ea_localid="54" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Spring Boot Application"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="@SpringBootApplication - vstupny bod aplikacie."/>
+      </element>
+      <element xmi:idref="EAID_E00000055" xmi:type="uml:Class" name="DatabaseConfiguration" scope="public">
+        <model package="EAPK_00000007" ea_localid="55" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Configuration"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="@Configuration - definuje beans znalostiRepository (RepositoryPool) a refidRepository (RDF4J Repository)."/>
+      </element>
+      <element xmi:idref="EAID_E00000056" xmi:type="uml:Class" name="SecurityConfig" scope="public">
+        <model package="EAPK_00000007" ea_localid="56" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Configuration"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spring Security - HTTP Basic, /integration/** vyzaduje rolu INT_PARTNER, BCrypt, in-memory pouzivatel (metais)."/>
+      </element>
+      <element xmi:idref="EAID_E00000057" xmi:type="uml:Class" name="RestConfigurator" scope="public">
+        <model package="EAPK_00000007" ea_localid="57" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="Configuration"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000058" xmi:type="uml:Class" name="RestExceptionHandler" scope="public">
+        <model package="EAPK_00000007" ea_localid="58" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Class" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="ControllerAdvice"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000059" xmi:type="uml:Node" name="znalosti-proxy" scope="public">
+        <model package="EAPK_00000008" ea_localid="59" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="device"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Reverzny proxy (znalosti-proxy image). Port 81 -&gt; 80."/>
+      </element>
+      <element xmi:idref="EAID_E00000060" xmi:type="uml:Node" name="znalosti" scope="public">
+        <model package="EAPK_00000008" ea_localid="60" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="device"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spring Boot aplikacia, profil 'prod'. Port 9090 -&gt; 8080."/>
+      </element>
+      <element xmi:idref="EAID_E00000061" xmi:type="uml:Node" name="znalosti-test" scope="public">
+        <model package="EAPK_00000008" ea_localid="61" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="device"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spring Boot aplikacia, profil 'test'. Port 9091 -&gt; 8080."/>
+      </element>
+      <element xmi:idref="EAID_E00000062" xmi:type="uml:Node" name="rdf-server" scope="public">
+        <model package="EAPK_00000008" ea_localid="62" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="device"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Eclipse RDF4J Workbench 4.3.8 (Tomcat). Port 8080. Repozitare: znalosti.gov.sk, refid (NativeStore spoc,posc)."/>
+      </element>
+      <element xmi:idref="EAID_E00000063" xmi:type="uml:Artifact" name="znalosti.jar" scope="public">
+        <model package="EAPK_00000008" ea_localid="63" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Artifact" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="jar"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Spustitelny Spring Boot JAR (Vaadin frontend zabundlovany)."/>
+      </element>
+      <element xmi:idref="EAID_E00000064" xmi:type="uml:Node" name="Web Browser" scope="public">
+        <model package="EAPK_00000008" ea_localid="64" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="device"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Klient - pouzivatel portalu."/>
+      </element>
+      <element xmi:idref="EAID_E00000065" xmi:type="uml:Node" name="GitHub: centralny-model-udajov" scope="public">
+        <model package="EAPK_00000008" ea_localid="65" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="external system"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Zdrojove RDF data (vetvy repozitara). REST: api.github.com/repos/slovak-egov/centralny-model-udajov."/>
+      </element>
+      <element xmi:idref="EAID_E00000066" xmi:type="uml:Node" name="MetaIS (Integration Partner)" scope="public">
+        <model package="EAPK_00000008" ea_localid="66" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Node" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="external system"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Centralny metainformacny system VS - integracny partner refid API."/>
+      </element>
+      <element xmi:idref="EAID_E00000067" xmi:type="uml:Component" name="Web UI (Vaadin Flow + IDSK)" scope="public">
+        <model package="EAPK_00000002" ea_localid="67" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="subsystem"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Prezentacna vrstva - server-side UI."/>
+      </element>
+      <element xmi:idref="EAID_E00000068" xmi:type="uml:Component" name="REST API" scope="public">
+        <model package="EAPK_00000002" ea_localid="68" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="subsystem"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Verejne API (/api) a integracne API (/integration)."/>
+      </element>
+      <element xmi:idref="EAID_E00000069" xmi:type="uml:Component" name="Service Layer" scope="public">
+        <model package="EAPK_00000002" ea_localid="69" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="subsystem"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Aplikacna logika."/>
+      </element>
+      <element xmi:idref="EAID_E00000070" xmi:type="uml:Component" name="RDF Repository Access (RepositoryPool)" scope="public">
+        <model package="EAPK_00000002" ea_localid="70" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="subsystem"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+        <documentation value="Pristup k RDF4J, nacitanie dat z GitHub."/>
+      </element>
+      <element xmi:idref="EAID_E00000071" xmi:type="uml:Component" name="Security (Spring Security)" scope="public">
+        <model package="EAPK_00000002" ea_localid="71" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="subsystem"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000072" xmi:type="uml:Component" name="RDF4J Triple Store" scope="public">
+        <model package="EAPK_00000002" ea_localid="72" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="external system"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000073" xmi:type="uml:Component" name="GitHub Source Data" scope="public">
+        <model package="EAPK_00000002" ea_localid="73" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="external system"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+      <element xmi:idref="EAID_E00000074" xmi:type="uml:Component" name="MetaIS" scope="public">
+        <model package="EAPK_00000002" ea_localid="74" ea_eleType="element"/>
+        <properties isSpecification="false" sType="Component" nType="0" scope="public"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" phase="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00" complexity="2" status="Proposed"/>
+        <stereotype stereotype="external system"/>
+        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+      </element>
+    </elements>
+    <connectors>
+      <connector xmi:idref="EAID_C00000001">
+        <source xmi:idref="EAID_E00000067">
+          <model ea_localid="67" type="Component" name="Web UI (Vaadin Flow + IDSK)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000068">
+          <model ea_localid="68" type="Component" name="REST API"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000002">
+        <source xmi:idref="EAID_E00000067">
+          <model ea_localid="67" type="Component" name="Web UI (Vaadin Flow + IDSK)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000069">
+          <model ea_localid="69" type="Component" name="Service Layer"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000003">
+        <source xmi:idref="EAID_E00000068">
+          <model ea_localid="68" type="Component" name="REST API"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000069">
+          <model ea_localid="69" type="Component" name="Service Layer"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000004">
+        <source xmi:idref="EAID_E00000069">
+          <model ea_localid="69" type="Component" name="Service Layer"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000070">
+          <model ea_localid="70" type="Component" name="RDF Repository Access (RepositoryPool)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000005">
+        <source xmi:idref="EAID_E00000068">
+          <model ea_localid="68" type="Component" name="REST API"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000071">
+          <model ea_localid="71" type="Component" name="Security (Spring Security)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000006" name="SPARQL / RDF4J REST">
+        <source xmi:idref="EAID_E00000070">
+          <model ea_localid="70" type="Component" name="RDF Repository Access (RepositoryPool)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000072">
+          <model ea_localid="72" type="Component" name="RDF4J Triple Store"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000007" name="HTTPS (zipball/branches)">
+        <source xmi:idref="EAID_E00000070">
+          <model ea_localid="70" type="Component" name="RDF Repository Access (RepositoryPool)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000073">
+          <model ea_localid="73" type="Component" name="GitHub Source Data"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000008" name="refid integration API">
+        <source xmi:idref="EAID_E00000074">
+          <model ea_localid="74" type="Component" name="MetaIS"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000068">
+          <model ea_localid="68" type="Component" name="REST API"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Usage" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000009">
+        <source xmi:idref="EAID_E00000001">
+          <model ea_localid="1" type="Class" name="MainView"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000010">
+          <model ea_localid="10" type="Class" name="IDSKHeaderWeb"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000010">
+        <source xmi:idref="EAID_E00000010">
+          <model ea_localid="10" type="Class" name="IDSKHeaderWeb"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000011">
+          <model ea_localid="11" type="Class" name="IDSKHeaderWebMain"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000011">
+        <source xmi:idref="EAID_E00000010">
+          <model ea_localid="10" type="Class" name="IDSKHeaderWeb"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000012">
+          <model ea_localid="12" type="Class" name="IDSKHeaderWebNav"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000012">
+        <source xmi:idref="EAID_E00000002">
+          <model ea_localid="2" type="Class" name="SearchView"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000017">
+          <model ea_localid="17" type="Class" name="SearchService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000013">
+        <source xmi:idref="EAID_E00000003">
+          <model ea_localid="3" type="Class" name="ResourceView"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000018">
+          <model ea_localid="18" type="Class" name="ResourceService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000014">
+        <source xmi:idref="EAID_E00000006">
+          <model ea_localid="6" type="Class" name="DataView"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000022">
+          <model ea_localid="22" type="Class" name="DatasetService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000015">
+        <source xmi:idref="EAID_E00000007">
+          <model ea_localid="7" type="Class" name="SparqlView"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000020">
+          <model ea_localid="20" type="Class" name="SparqlQueryService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000016">
+        <source xmi:idref="EAID_E00000004">
+          <model ea_localid="4" type="Class" name="MetadataView"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000021">
+          <model ea_localid="21" type="Class" name="StatisticsService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000017">
+        <source xmi:idref="EAID_E00000015">
+          <model ea_localid="15" type="Class" name="ResourceController"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000017">
+          <model ea_localid="17" type="Class" name="SearchService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000018">
+        <source xmi:idref="EAID_E00000015">
+          <model ea_localid="15" type="Class" name="ResourceController"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000019">
+        <source xmi:idref="EAID_E00000016">
+          <model ea_localid="16" type="Class" name="ReferenceIdentifierManagementController"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000023">
+          <model ea_localid="23" type="Class" name="ReferenceIdentifierApplicationManagementService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000020">
+        <source xmi:idref="EAID_E00000017">
+          <model ea_localid="17" type="Class" name="SearchService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000021">
+        <source xmi:idref="EAID_E00000018">
+          <model ea_localid="18" type="Class" name="ResourceService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000022">
+        <source xmi:idref="EAID_E00000020">
+          <model ea_localid="20" type="Class" name="SparqlQueryService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000023">
+        <source xmi:idref="EAID_E00000021">
+          <model ea_localid="21" type="Class" name="StatisticsService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000024">
+        <source xmi:idref="EAID_E00000022">
+          <model ea_localid="22" type="Class" name="DatasetService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000025">
+        <source xmi:idref="EAID_E00000023">
+          <model ea_localid="23" type="Class" name="ReferenceIdentifierApplicationManagementService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000024">
+          <model ea_localid="24" type="Class" name="LoadReferenceIdentifierApplicationManagementService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000026">
+        <source xmi:idref="EAID_E00000023">
+          <model ea_localid="23" type="Class" name="ReferenceIdentifierApplicationManagementService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000025">
+          <model ea_localid="25" type="Class" name="ApplicationURIMapperUtils"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000027">
+        <source xmi:idref="EAID_E00000017">
+          <model ea_localid="17" type="Class" name="SearchService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000028">
+          <model ea_localid="28" type="Class" name="Result"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000028">
+        <source xmi:idref="EAID_E00000018">
+          <model ea_localid="18" type="Class" name="ResourceService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000029">
+          <model ea_localid="29" type="Class" name="Resource"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000029">
+        <source xmi:idref="EAID_E00000022">
+          <model ea_localid="22" type="Class" name="DatasetService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000030">
+          <model ea_localid="30" type="Class" name="Dataset"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000030">
+        <source xmi:idref="EAID_E00000029">
+          <model ea_localid="29" type="Class" name="Resource"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000027">
+          <model ea_localid="27" type="Class" name="AbstractEntity"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000031">
+        <source xmi:idref="EAID_E00000030">
+          <model ea_localid="30" type="Class" name="Dataset"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000027">
+          <model ea_localid="27" type="Class" name="AbstractEntity"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000032">
+        <source xmi:idref="EAID_E00000032">
+          <model ea_localid="32" type="Class" name="OntologyRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000033">
+        <source xmi:idref="EAID_E00000033">
+          <model ea_localid="33" type="Class" name="OntologyVersionRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000034">
+        <source xmi:idref="EAID_E00000034">
+          <model ea_localid="34" type="Class" name="OntologyComponentRegistrationApplication&lt;T&gt;"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000035">
+        <source xmi:idref="EAID_E00000035">
+          <model ea_localid="35" type="Class" name="ClassComponentRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000034">
+          <model ea_localid="34" type="Class" name="OntologyComponentRegistrationApplication&lt;T&gt;"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000036">
+        <source xmi:idref="EAID_E00000036">
+          <model ea_localid="36" type="Class" name="DatatypePropertyComponentRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000034">
+          <model ea_localid="34" type="Class" name="OntologyComponentRegistrationApplication&lt;T&gt;"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000037">
+        <source xmi:idref="EAID_E00000037">
+          <model ea_localid="37" type="Class" name="ObjectPropertyComponentRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000034">
+          <model ea_localid="34" type="Class" name="OntologyComponentRegistrationApplication&lt;T&gt;"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000038">
+        <source xmi:idref="EAID_E00000038">
+          <model ea_localid="38" type="Class" name="URITemplateRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000039">
+        <source xmi:idref="EAID_E00000048">
+          <model ea_localid="48" type="Class" name="ClassComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000047">
+          <model ea_localid="47" type="Class" name="OntologyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000040">
+        <source xmi:idref="EAID_E00000049">
+          <model ea_localid="49" type="Class" name="DatatypePropertyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000047">
+          <model ea_localid="47" type="Class" name="OntologyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000041">
+        <source xmi:idref="EAID_E00000050">
+          <model ea_localid="50" type="Class" name="ObjectPropertyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000047">
+          <model ea_localid="47" type="Class" name="OntologyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000042" name="createdBy/approvedBy">
+        <source xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000039">
+          <model ea_localid="39" type="Class" name="User"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000043" name="applicant">
+        <source xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000040">
+          <model ea_localid="40" type="Class" name="Organization"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000044" name="state">
+        <source xmi:idref="EAID_E00000031">
+          <model ea_localid="31" type="Class" name="SemanticResourceRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000041">
+          <model ea_localid="41" type="Enumeration" name="ApplicationState"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000045" name="subject">
+        <source xmi:idref="EAID_E00000032">
+          <model ea_localid="32" type="Class" name="OntologyRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000044">
+          <model ea_localid="44" type="Class" name="OntologyConcept"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000046" name="subject">
+        <source xmi:idref="EAID_E00000034">
+          <model ea_localid="34" type="Class" name="OntologyComponentRegistrationApplication&lt;T&gt;"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000047">
+          <model ea_localid="47" type="Class" name="OntologyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000047" name="subject">
+        <source xmi:idref="EAID_E00000035">
+          <model ea_localid="35" type="Class" name="ClassComponentRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000048">
+          <model ea_localid="48" type="Class" name="ClassComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000048" name="subject">
+        <source xmi:idref="EAID_E00000036">
+          <model ea_localid="36" type="Class" name="DatatypePropertyComponentRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000049">
+          <model ea_localid="49" type="Class" name="DatatypePropertyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000049" name="subject">
+        <source xmi:idref="EAID_E00000037">
+          <model ea_localid="37" type="Class" name="ObjectPropertyComponentRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000050">
+          <model ea_localid="50" type="Class" name="ObjectPropertyComponent"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000050" name="subject">
+        <source xmi:idref="EAID_E00000038">
+          <model ea_localid="38" type="Class" name="URITemplateRegistrationApplication"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000045">
+          <model ea_localid="45" type="Class" name="URITemplate"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000051">
+        <source xmi:idref="EAID_E00000045">
+          <model ea_localid="45" type="Class" name="URITemplate"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000046">
+          <model ea_localid="46" type="Class" name="URITemplateQueryParam"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000052" name="ontology">
+        <source xmi:idref="EAID_E00000044">
+          <model ea_localid="44" type="Class" name="OntologyConcept"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000043">
+          <model ea_localid="43" type="Class" name="Ontology"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000053" name="@Bean znalostiRepository">
+        <source xmi:idref="EAID_E00000055">
+          <model ea_localid="55" type="Class" name="DatabaseConfiguration"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000026">
+          <model ea_localid="26" type="Class" name="RepositoryPool"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000054" name="refidRepository">
+        <source xmi:idref="EAID_E00000023">
+          <model ea_localid="23" type="Class" name="ReferenceIdentifierApplicationManagementService"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000055">
+          <model ea_localid="55" type="Class" name="DatabaseConfiguration"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000055">
+        <source xmi:idref="EAID_E00000054">
+          <model ea_localid="54" type="Class" name="Application"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000055">
+          <model ea_localid="55" type="Class" name="DatabaseConfiguration"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000056" name="secured by">
+        <source xmi:idref="EAID_E00000016">
+          <model ea_localid="16" type="Class" name="ReferenceIdentifierManagementController"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000056">
+          <model ea_localid="56" type="Class" name="SecurityConfig"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000057">
+        <source xmi:idref="EAID_E00000063">
+          <model ea_localid="63" type="Artifact" name="znalosti.jar"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000060">
+          <model ea_localid="60" type="Node" name="znalosti"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Deployment" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000058">
+        <source xmi:idref="EAID_E00000063">
+          <model ea_localid="63" type="Artifact" name="znalosti.jar"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000061">
+          <model ea_localid="61" type="Node" name="znalosti-test"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Deployment" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000059">
+        <source xmi:idref="EAID_E00000063">
+          <model ea_localid="63" type="Artifact" name="znalosti.jar"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000067">
+          <model ea_localid="67" type="Component" name="Web UI (Vaadin Flow + IDSK)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Manifest" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000060" name="HTTPS">
+        <source xmi:idref="EAID_E00000064">
+          <model ea_localid="64" type="Node" name="Web Browser"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000059">
+          <model ea_localid="59" type="Node" name="znalosti-proxy"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000061" name="HTTP :9090">
+        <source xmi:idref="EAID_E00000059">
+          <model ea_localid="59" type="Node" name="znalosti-proxy"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000060">
+          <model ea_localid="60" type="Node" name="znalosti"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000062" name="HTTP :9091">
+        <source xmi:idref="EAID_E00000059">
+          <model ea_localid="59" type="Node" name="znalosti-proxy"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000061">
+          <model ea_localid="61" type="Node" name="znalosti-test"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000063" name="RDF4J REST :8080">
+        <source xmi:idref="EAID_E00000060">
+          <model ea_localid="60" type="Node" name="znalosti"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000062">
+          <model ea_localid="62" type="Node" name="rdf-server"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000064" name="RDF4J REST :8080">
+        <source xmi:idref="EAID_E00000061">
+          <model ea_localid="61" type="Node" name="znalosti-test"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000062">
+          <model ea_localid="62" type="Node" name="rdf-server"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000065" name="HTTPS source data">
+        <source xmi:idref="EAID_E00000060">
+          <model ea_localid="60" type="Node" name="znalosti"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000065">
+          <model ea_localid="65" type="Node" name="GitHub: centralny-model-udajov"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+      <connector xmi:idref="EAID_C00000066" name="refid integration API">
+        <source xmi:idref="EAID_E00000066">
+          <model ea_localid="66" type="Node" name="MetaIS (Integration Partner)"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </source>
+        <target xmi:idref="EAID_E00000059">
+          <model ea_localid="59" type="Node" name="znalosti-proxy"/>
+          <role visibility="Public"/>
+          <type aggregation="none" containment="Unspecified"/>
+        </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination"/>
+        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+      </connector>
+    </connectors>
     <diagrams>
       <diagram xmi:id="EAID_DGM00000001">
-        <model package="EAPK_00000002" localID="1"/>
+        <model package="EAPK_00000002" localID="1" owner="EAPK_00000002"/>
         <properties name="01 Architecture Overview" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000067" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000068" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000069" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000070" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000071" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000072" seqno="6"/>
-          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000073" seqno="7"/>
-          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000074" seqno="8"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000067" seqno="1" style="DUID=00000067;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000068" seqno="2" style="DUID=00000068;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000069" seqno="3" style="DUID=00000069;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000070" seqno="4" style="DUID=00000070;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000071" seqno="5" style="DUID=00000071;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000072" seqno="6" style="DUID=00000072;"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000073" seqno="7" style="DUID=00000073;"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000074" seqno="8" style="DUID=00000074;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000002">
-        <model package="EAPK_00000003" localID="2"/>
+        <model package="EAPK_00000003" localID="2" owner="EAPK_00000003"/>
         <properties name="02 Presentation Layer" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000001" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000002" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000003" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000004" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000005" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000006" seqno="6"/>
-          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000007" seqno="7"/>
-          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000008" seqno="8"/>
-          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000009" seqno="9"/>
-          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000010" seqno="10"/>
-          <element geometry="Left=470;Top=330;Right=640;Bottom=420;" subject="EAID_E00000011" seqno="11"/>
-          <element geometry="Left=690;Top=330;Right=860;Bottom=420;" subject="EAID_E00000012" seqno="12"/>
-          <element geometry="Left=30;Top=480;Right=200;Bottom=570;" subject="EAID_E00000013" seqno="13"/>
-          <element geometry="Left=250;Top=480;Right=420;Bottom=570;" subject="EAID_E00000014" seqno="14"/>
-          <element geometry="Left=470;Top=480;Right=640;Bottom=570;" subject="EAID_E00000017" seqno="15"/>
-          <element geometry="Left=690;Top=480;Right=860;Bottom=570;" subject="EAID_E00000018" seqno="16"/>
-          <element geometry="Left=30;Top=630;Right=200;Bottom=720;" subject="EAID_E00000022" seqno="17"/>
-          <element geometry="Left=250;Top=630;Right=420;Bottom=720;" subject="EAID_E00000020" seqno="18"/>
-          <element geometry="Left=470;Top=630;Right=640;Bottom=720;" subject="EAID_E00000021" seqno="19"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000001" seqno="1" style="DUID=00000001;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000002" seqno="2" style="DUID=00000002;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000003" seqno="3" style="DUID=00000003;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000004" seqno="4" style="DUID=00000004;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000005" seqno="5" style="DUID=00000005;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000006" seqno="6" style="DUID=00000006;"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000007" seqno="7" style="DUID=00000007;"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000008" seqno="8" style="DUID=00000008;"/>
+          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000009" seqno="9" style="DUID=00000009;"/>
+          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000010" seqno="10" style="DUID=00000010;"/>
+          <element geometry="Left=470;Top=330;Right=640;Bottom=420;" subject="EAID_E00000011" seqno="11" style="DUID=00000011;"/>
+          <element geometry="Left=690;Top=330;Right=860;Bottom=420;" subject="EAID_E00000012" seqno="12" style="DUID=00000012;"/>
+          <element geometry="Left=30;Top=480;Right=200;Bottom=570;" subject="EAID_E00000013" seqno="13" style="DUID=00000013;"/>
+          <element geometry="Left=250;Top=480;Right=420;Bottom=570;" subject="EAID_E00000014" seqno="14" style="DUID=00000014;"/>
+          <element geometry="Left=470;Top=480;Right=640;Bottom=570;" subject="EAID_E00000017" seqno="15" style="DUID=00000017;"/>
+          <element geometry="Left=690;Top=480;Right=860;Bottom=570;" subject="EAID_E00000018" seqno="16" style="DUID=00000018;"/>
+          <element geometry="Left=30;Top=630;Right=200;Bottom=720;" subject="EAID_E00000022" seqno="17" style="DUID=00000022;"/>
+          <element geometry="Left=250;Top=630;Right=420;Bottom=720;" subject="EAID_E00000020" seqno="18" style="DUID=00000020;"/>
+          <element geometry="Left=470;Top=630;Right=640;Bottom=720;" subject="EAID_E00000021" seqno="19" style="DUID=00000021;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000003">
-        <model package="EAPK_00000004" localID="3"/>
+        <model package="EAPK_00000004" localID="3" owner="EAPK_00000004"/>
         <properties name="03 REST API Layer" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000015" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000016" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000017" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000026" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000023" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000056" seqno="6"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000015" seqno="1" style="DUID=00000015;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000016" seqno="2" style="DUID=00000016;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000017" seqno="3" style="DUID=00000017;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000026" seqno="4" style="DUID=00000026;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000023" seqno="5" style="DUID=00000023;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000056" seqno="6" style="DUID=00000056;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000004">
-        <model package="EAPK_00000005" localID="4"/>
+        <model package="EAPK_00000005" localID="4" owner="EAPK_00000005"/>
         <properties name="04 Service Layer" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000017" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000018" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000019" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000020" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000021" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000022" seqno="6"/>
-          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000023" seqno="7"/>
-          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000024" seqno="8"/>
-          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000025" seqno="9"/>
-          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000026" seqno="10"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000017" seqno="1" style="DUID=00000017;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000018" seqno="2" style="DUID=00000018;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000019" seqno="3" style="DUID=00000019;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000020" seqno="4" style="DUID=00000020;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000021" seqno="5" style="DUID=00000021;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000022" seqno="6" style="DUID=00000022;"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000023" seqno="7" style="DUID=00000023;"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000024" seqno="8" style="DUID=00000024;"/>
+          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000025" seqno="9" style="DUID=00000025;"/>
+          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000026" seqno="10" style="DUID=00000026;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000005">
-        <model package="EAPK_00000006" localID="5"/>
+        <model package="EAPK_00000006" localID="5" owner="EAPK_00000006"/>
         <properties name="05a Domain Model - refid Applications" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000031" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000032" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000033" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000034" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000035" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000036" seqno="6"/>
-          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000037" seqno="7"/>
-          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000038" seqno="8"/>
-          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000039" seqno="9"/>
-          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000040" seqno="10"/>
-          <element geometry="Left=470;Top=330;Right=640;Bottom=420;" subject="EAID_E00000041" seqno="11"/>
-          <element geometry="Left=690;Top=330;Right=860;Bottom=420;" subject="EAID_E00000044" seqno="12"/>
-          <element geometry="Left=30;Top=480;Right=200;Bottom=570;" subject="EAID_E00000047" seqno="13"/>
-          <element geometry="Left=250;Top=480;Right=420;Bottom=570;" subject="EAID_E00000048" seqno="14"/>
-          <element geometry="Left=470;Top=480;Right=640;Bottom=570;" subject="EAID_E00000049" seqno="15"/>
-          <element geometry="Left=690;Top=480;Right=860;Bottom=570;" subject="EAID_E00000050" seqno="16"/>
-          <element geometry="Left=30;Top=630;Right=200;Bottom=720;" subject="EAID_E00000045" seqno="17"/>
-          <element geometry="Left=250;Top=630;Right=420;Bottom=720;" subject="EAID_E00000046" seqno="18"/>
-          <element geometry="Left=470;Top=630;Right=640;Bottom=720;" subject="EAID_E00000043" seqno="19"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000031" seqno="1" style="DUID=00000031;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000032" seqno="2" style="DUID=00000032;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000033" seqno="3" style="DUID=00000033;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000034" seqno="4" style="DUID=00000034;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000035" seqno="5" style="DUID=00000035;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000036" seqno="6" style="DUID=00000036;"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000037" seqno="7" style="DUID=00000037;"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000038" seqno="8" style="DUID=00000038;"/>
+          <element geometry="Left=30;Top=330;Right=200;Bottom=420;" subject="EAID_E00000039" seqno="9" style="DUID=00000039;"/>
+          <element geometry="Left=250;Top=330;Right=420;Bottom=420;" subject="EAID_E00000040" seqno="10" style="DUID=00000040;"/>
+          <element geometry="Left=470;Top=330;Right=640;Bottom=420;" subject="EAID_E00000041" seqno="11" style="DUID=00000041;"/>
+          <element geometry="Left=690;Top=330;Right=860;Bottom=420;" subject="EAID_E00000044" seqno="12" style="DUID=00000044;"/>
+          <element geometry="Left=30;Top=480;Right=200;Bottom=570;" subject="EAID_E00000047" seqno="13" style="DUID=00000047;"/>
+          <element geometry="Left=250;Top=480;Right=420;Bottom=570;" subject="EAID_E00000048" seqno="14" style="DUID=00000048;"/>
+          <element geometry="Left=470;Top=480;Right=640;Bottom=570;" subject="EAID_E00000049" seqno="15" style="DUID=00000049;"/>
+          <element geometry="Left=690;Top=480;Right=860;Bottom=570;" subject="EAID_E00000050" seqno="16" style="DUID=00000050;"/>
+          <element geometry="Left=30;Top=630;Right=200;Bottom=720;" subject="EAID_E00000045" seqno="17" style="DUID=00000045;"/>
+          <element geometry="Left=250;Top=630;Right=420;Bottom=720;" subject="EAID_E00000046" seqno="18" style="DUID=00000046;"/>
+          <element geometry="Left=470;Top=630;Right=640;Bottom=720;" subject="EAID_E00000043" seqno="19" style="DUID=00000043;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000006">
-        <model package="EAPK_00000006" localID="6"/>
+        <model package="EAPK_00000006" localID="6" owner="EAPK_00000006"/>
         <properties name="05b Domain Model - Core Entities" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000027" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000029" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000030" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000028" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000026" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000051" seqno="6"/>
-          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000052" seqno="7"/>
-          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000053" seqno="8"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000027" seqno="1" style="DUID=00000027;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000029" seqno="2" style="DUID=00000029;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000030" seqno="3" style="DUID=00000030;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000028" seqno="4" style="DUID=00000028;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000026" seqno="5" style="DUID=00000026;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000051" seqno="6" style="DUID=00000051;"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000052" seqno="7" style="DUID=00000052;"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000053" seqno="8" style="DUID=00000053;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000007">
-        <model package="EAPK_00000007" localID="7"/>
+        <model package="EAPK_00000007" localID="7" owner="EAPK_00000007"/>
         <properties name="06 Configuration &amp; Infrastructure" type="Logical"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000054" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000055" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000056" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000057" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000058" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000026" seqno="6"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000054" seqno="1" style="DUID=00000054;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000055" seqno="2" style="DUID=00000055;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000056" seqno="3" style="DUID=00000056;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000057" seqno="4" style="DUID=00000057;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000058" seqno="5" style="DUID=00000058;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000026" seqno="6" style="DUID=00000026;"/>
         </elements>
       </diagram>
       <diagram xmi:id="EAID_DGM00000008">
-        <model package="EAPK_00000008" localID="8"/>
+        <model package="EAPK_00000008" localID="8" owner="EAPK_00000008"/>
         <properties name="07 Deployment" type="Deployment"/>
+        <project author="znalosti.gov.sk model generator" version="1.0" created="2026-06-25 00:00:00" modified="2026-06-25 00:00:00"/>
+        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>
         <elements>
-          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000064" seqno="1"/>
-          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000059" seqno="2"/>
-          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000060" seqno="3"/>
-          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000061" seqno="4"/>
-          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000062" seqno="5"/>
-          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000063" seqno="6"/>
-          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000065" seqno="7"/>
-          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000066" seqno="8"/>
+          <element geometry="Left=30;Top=30;Right=200;Bottom=120;" subject="EAID_E00000064" seqno="1" style="DUID=00000064;"/>
+          <element geometry="Left=250;Top=30;Right=420;Bottom=120;" subject="EAID_E00000059" seqno="2" style="DUID=00000059;"/>
+          <element geometry="Left=470;Top=30;Right=640;Bottom=120;" subject="EAID_E00000060" seqno="3" style="DUID=00000060;"/>
+          <element geometry="Left=690;Top=30;Right=860;Bottom=120;" subject="EAID_E00000061" seqno="4" style="DUID=00000061;"/>
+          <element geometry="Left=30;Top=180;Right=200;Bottom=270;" subject="EAID_E00000062" seqno="5" style="DUID=00000062;"/>
+          <element geometry="Left=250;Top=180;Right=420;Bottom=270;" subject="EAID_E00000063" seqno="6" style="DUID=00000063;"/>
+          <element geometry="Left=470;Top=180;Right=640;Bottom=270;" subject="EAID_E00000065" seqno="7" style="DUID=00000065;"/>
+          <element geometry="Left=690;Top=180;Right=860;Bottom=270;" subject="EAID_E00000066" seqno="8" style="DUID=00000066;"/>
         </elements>
       </diagram>
     </diagrams>

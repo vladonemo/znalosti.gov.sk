@@ -773,27 +773,115 @@ def emit_xmi(model, path):
 
     out.append('  </uml:Model>')
 
-    # --- EA extension: diagrams ------------------------------------------
+    # --- EA-native extension (elements + connectors + diagrams) ----------
+    # Enterprise Architect reconstructs diagrams from this extension. It needs
+    # the <elements> and <connectors> lists so that diagram element "subject"
+    # references resolve; without them EA imports the model tree but drops the
+    # diagrams (the problem we are fixing here).
+    pkg_index = {p["id"]: p for p in model.packages}
+    EA_STYPE = {"Class": "Class", "Component": "Component", "Node": "Node",
+                "Artifact": "Artifact", "Enumeration": "Enumeration"}
+    EA_CONN_TYPE = {"Deploy": "Deployment"}
+    AUTHOR = "znalosti.gov.sk model generator"
+
     out.append('  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">')
+
+    # ---- elements (packages + classifiers) ----
+    out.append('    <elements>')
+    for p in model.packages:
+        if p["parent_id"] == 0:
+            continue  # root maps onto the EA model node
+        parent_ref = ("EAPK_%08d" % p["parent_id"]) if p["parent_id"] != 0 else "EAID_MODEL"
+        out.append('      <element xmi:idref="%s" xmi:type="uml:Package" name="%s" scope="public">'
+                   % (pid(p), xml_escape(p["name"])))
+        out.append('        <model package="%s" ea_localid="%d" ea_eleType="package"/>'
+                   % (parent_ref, 100000 + p["id"]))
+        out.append('        <properties isSpecification="false" sType="Package" nType="0" scope="public"/>')
+        out.append('        <project author="%s" version="1.0" phase="1.0" created="%s" '
+                   'modified="%s" complexity="2" status="Proposed"/>' % (AUTHOR, NOW, NOW))
+        out.append('        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;'
+                   'FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>')
+        if p["notes"]:
+            out.append('        <documentation value="%s"/>' % xml_escape(p["notes"]))
+        out.append('      </element>')
+    for e in model.elements:
+        stype = EA_STYPE.get(e["type"], "Class")
+        absx = ' isAbstract="true"' if e["abstract"] else ''
+        out.append('      <element xmi:idref="%s" xmi:type="%s" name="%s" scope="public">'
+                   % (eid(e), UML_TYPE.get(e["type"], "uml:Class"), xml_escape(e["name"])))
+        out.append('        <model package="EAPK_%08d" ea_localid="%d" ea_eleType="element"/>'
+                   % (e["package_id"], e["id"]))
+        out.append('        <properties isSpecification="false" sType="%s" nType="0" '
+                   'scope="public"%s/>' % (stype, absx))
+        out.append('        <project author="%s" version="1.0" phase="1.0" created="%s" '
+                   'modified="%s" complexity="2" status="Proposed"/>' % (AUTHOR, NOW, NOW))
+        if e["stereotype"]:
+            out.append('        <stereotype stereotype="%s"/>' % xml_escape(e["stereotype"]))
+        out.append('        <style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;'
+                   'FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>')
+        if e["notes"]:
+            out.append('        <documentation value="%s"/>' % xml_escape(e["notes"]))
+        out.append('      </element>')
+    out.append('    </elements>')
+
+    # ---- connectors ----
+    out.append('    <connectors>')
+    for c in model.connectors:
+        src = elem_index[c["src"]]
+        dst = elem_index[c["dst"]]
+        ea_type = EA_CONN_TYPE.get(c["type"], c["type"])
+        nm = (' name="%s"' % xml_escape(c["name"])) if c["name"] else ''
+        out.append('      <connector xmi:idref="%s"%s>' % (xmi_id("C", c["id"]), nm))
+        out.append('        <source xmi:idref="%s">' % eid(src))
+        out.append('          <model ea_localid="%d" type="%s" name="%s"/>'
+                   % (src["id"], EA_STYPE.get(src["type"], "Class"), xml_escape(src["name"])))
+        out.append('          <role visibility="Public"/>')
+        out.append('          <type aggregation="none" containment="Unspecified"/>')
+        out.append('        </source>')
+        out.append('        <target xmi:idref="%s">' % eid(dst))
+        out.append('          <model ea_localid="%d" type="%s" name="%s"/>'
+                   % (dst["id"], EA_STYPE.get(dst["type"], "Class"), xml_escape(dst["name"])))
+        out.append('          <role visibility="Public"/>')
+        out.append('          <type aggregation="none" containment="Unspecified"/>')
+        out.append('        </target>')
+        out.append('        <properties ea_type="%s" direction="Source -&gt; Destination"/>'
+                   % xml_escape(ea_type))
+        out.append('        <appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" '
+                   'headStyle="0" lineStyle="0"/>')
+        out.append('      </connector>')
+    out.append('    </connectors>')
+
+    # ---- diagrams ----
     out.append('    <diagrams>')
+    cols, cell_w, cell_h, box_w, box_h = 4, 220, 150, 170, 90
     for d in model.diagrams:
+        pkg_ref = "EAPK_%08d" % d["package_id"]
         out.append('      <diagram xmi:id="EAID_DGM%08d">' % d["id"])
-        out.append('        <model package="%s" localID="%d"/>'
-                   % ("EAPK_%08d" % d["package_id"], d["id"]))
+        out.append('        <model package="%s" localID="%d" owner="%s"/>'
+                   % (pkg_ref, d["id"], pkg_ref))
         out.append('        <properties name="%s" type="%s"/>'
                    % (xml_escape(d["name"]), xml_escape(d["type"])))
+        out.append('        <project author="%s" version="1.0" created="%s" modified="%s"/>'
+                   % (AUTHOR, NOW, NOW))
+        out.append('        <style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;'
+                   'HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;'
+                   'SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=826;'
+                   'DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;"/>')
+        # nodes
         out.append('        <elements>')
-        cols, cell_w, cell_h, box_w, box_h = 4, 220, 150, 170, 90
+        placed = set()
         for idx, e_id in enumerate(d["elems"]):
-            col, row = idx % cols, idx // cols
+            col, rrow = idx % cols, idx // cols
             left = 30 + col * cell_w
-            top = 30 + row * cell_h
+            top = 30 + rrow * cell_h
             geom = "Left=%d;Top=%d;Right=%d;Bottom=%d;" % (left, top, left + box_w, top + box_h)
-            out.append('          <element geometry="%s" subject="%s" seqno="%d"/>'
-                       % (geom, eid(elem_index[e_id]), idx + 1))
+            out.append('          <element geometry="%s" subject="%s" seqno="%d" style="DUID=%08d;"/>'
+                       % (geom, eid(elem_index[e_id]), idx + 1, e_id))
+            placed.add(e_id)
         out.append('        </elements>')
         out.append('      </diagram>')
     out.append('    </diagrams>')
+
     out.append('  </xmi:Extension>')
     out.append('</xmi:XMI>')
 
