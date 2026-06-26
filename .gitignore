@@ -21,3 +21,7 @@ error-screenshots/
 webpack.generated.js
 /bin/
 /.factorypath
+
+# Python cache
+__pycache__/
+*.pyc
