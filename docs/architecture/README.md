@@ -7,9 +7,15 @@ UML model architektúry aplikácie **znalosti.gov.sk** pre nástroj
 
 | Súbor | Formát | Použitie |
 |-------|--------|----------|
-| `znalosti-gov-sk-architecture.xml` | UML 2.1 / XMI 2.1 | Importovateľný model. |
+| `znalosti-gov-sk-architecture.qea` | Natívny EA projekt (SQLite) | **Otvorte priamo: File → Open Project** (EA 16+). Obsahuje celý model aj diagramy. |
+| `znalosti-gov-sk-architecture.xml` | UML 2.1 / XMI 2.1 | Alternatíva – import do existujúceho projektu. |
 | `generate_ea_model.py` | Python generátor | Zdroj modelu; regeneruje XMI. |
 | `generate_qea_from_base.py` | Python populátor | Naplní reálny EA base `.qea` modelom (viď „Možnosť A“). |
+
+> Hotový `znalosti-gov-sk-architecture.qea` bol vygenerovaný naplnením vášho
+> prázdneho EA base súboru. Model `znalosti.gov.sk` je v strome pod koreňovým
+> uzlom modelu (vo vašom base pomenovaný `finance`) – uzol môžete v EA ľubovoľne
+> premenovať alebo presunúť.
 
 ## Dva spôsoby, ako získať `.qea`
 
