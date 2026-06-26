@@ -7,19 +7,35 @@ UML model architektúry aplikácie **znalosti.gov.sk** pre nástroj
 
 | Súbor | Formát | Použitie |
 |-------|--------|----------|
-| `znalosti-gov-sk-architecture.xml` | UML 2.1 / XMI 2.1 | Importovateľný model – z neho vznikne natívny `.qea` (viď nižšie). |
-| `generate_ea_model.py` | Python generátor | Zdroj modelu; po zmene architektúry regeneruje XMI. |
+| `znalosti-gov-sk-architecture.xml` | UML 2.1 / XMI 2.1 | Importovateľný model. |
+| `generate_ea_model.py` | Python generátor | Zdroj modelu; regeneruje XMI. |
+| `generate_qea_from_base.py` | Python populátor | Naplní reálny EA base `.qea` modelom (viď „Možnosť A“). |
 
-## Ako získať funkčný `.qea` (dôležité)
+## Dva spôsoby, ako získať `.qea`
 
-`.qea` síce je SQLite databáza, ale Enterprise Architect pri otváraní
-**overuje kompletnú, verziovanú schému EA repozitára** (~200 systémových tabuliek
-a inicializačné dáta, ktoré sú dodávané iba v šablóne `EABase.qea` priamo v EA).
-Súbor `.qea` vytvorený mimo EA preto **nie je možné otvoriť** – EA ho odmietne
-chybou `Sparx Systems Database API [0x00001086]`.
+### Možnosť A – hotový `.qea` napĺňaním EA base (preferované)
 
-Správny a podporovaný postup je nechať EA vytvoriť prázdny `.qea` a importovať
-do neho tento model z XMI:
+`.qea` nie je možné vytvoriť úplne od nuly mimo EA – EA pri otváraní overuje
+kompletnú verziovanú schému repozitára (chyby `Sparx Systems Database API
+[0x00001086]`, resp. `Insert into usys_system () value ()`). Riešením je naplniť
+**reálny prázdny EA base** modelom:
+
+1. V EA vytvorte prázdny projekt: `Home` → **New Project** → uložte ako
+   `docs/architecture/base.qea`. (Alebo skopírujte `EABase.qea` z inštalačného
+   adresára EA – Sparx povoľuje jeho voľné kopírovanie.)
+2. Tento `base.qea` sprístupnite (napr. commit do tejto vetvy).
+3. Spustite populátor:
+   ```bash
+   cd docs/architecture
+   python3 generate_qea_from_base.py base.qea znalosti-gov-sk-architecture.qea
+   ```
+   Skript načíta skutočnú schému base súboru a vloží celý model
+   (balíky, triedy, atribúty, operácie, vzťahy, diagramy). Výsledný
+   `znalosti-gov-sk-architecture.qea` sa otvára priamo cez **File → Open Project**.
+
+### Možnosť B – import XMI do nového projektu
+
+Nechajte EA vytvoriť prázdny `.qea` a naimportujte do neho model z XMI:
 
 1. **Vytvorte nový projekt** – v EA: `Home` → **New Project** (alebo `Ctrl+N`).
    Zadajte názov a uložte ako napr. `znalosti-gov-sk-architecture.qea`.
