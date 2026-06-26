@@ -803,11 +803,21 @@ def emit_xmi(model, path):
 
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    emit_qea(m, QEA_PATH)
+    # NOTE: We intentionally emit ONLY the XMI artifact.
+    #
+    # A standalone, hand-written .qea cannot be opened by Enterprise Architect:
+    # EA validates a complete, version-stamped base schema (~200 system tables +
+    # seed rows that ship only inside EA's own EABase.qea template) and rejects
+    # anything else with "Sparx Systems Database API [0x00001086]".
+    #
+    # The supported way to obtain a real .qea is to let EA create the file
+    # (File > New Project, which clones EABase.qea) and then import this XMI
+    # (Publish > Model Exchange > Import Package from XMI). See README.md.
+    #
+    # The emit_qea() function is kept for reference only and is not called.
     emit_xmi(m, XMI_PATH)
     print("Packages : %d" % len(m.packages))
     print("Elements : %d" % len(m.elements))
     print("Connectors: %d" % len(m.connectors))
     print("Diagrams : %d" % len(m.diagrams))
-    print("Wrote: %s (%d bytes)" % (QEA_PATH, os.path.getsize(QEA_PATH)))
     print("Wrote: %s (%d bytes)" % (XMI_PATH, os.path.getsize(XMI_PATH)))
